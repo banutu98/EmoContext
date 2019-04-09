@@ -1,0 +1,16 @@
+{
+   "Sentences": 90476,
+   "Total Tokens (punctuation included)": 465642,
+   "Total Tokens (excluded punctuation)": 401521,
+   "Total Entities": 4760,
+   "PERSON": 1050,
+   "GPE": 2566,
+   "ORGANIZATION": 1114,
+   "GSP": 15,
+   "LOCATION": 7,
+   "FACILITY": 8,
+   "Total number of analyzed conversations": 30160,
+   "Positive conversations": 10458,
+   "Negative conversations": 6078,
+   "Neutral conversations": 13624
+}

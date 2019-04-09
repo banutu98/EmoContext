@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/index.css') }}">
+</head>
+<body>
+
+<header>
+<ul>
+  <li><a class="active" href="{{ url_for('homepage') }}">EmoContext</a></li>
+  <li><a href="{{ url_for('about') }}">about</a></li>
+</ul>
+</header>
+
+<div class="full-img-container">
+  <div class="margin"></div>
+  <a class="btn" href="{{ url_for('emocontext') }}">Check emotion</a>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+body, html {
+  margin:0;
+  font-family: 'Comfortaa', cursive;
+}
+* {
+   box-sizing: border-box;
+}
+header{
+	opacity: 0.8;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #a08400;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+li a:hover:not(.active) {
+  color: white;
+}
+
+.active {
+  background-color: #ccbd00;
+  font-family: 'Satisfy', cursive;
+  font-size: 25px;
+  padding: 7px 10px;
+  color: white;
+}
+
+.form-container{
+  width: 60%;
+  margin:auto;
+  margin-top: 10%;
+}
+form{
+  margin: 0;
+  padding:0;
+  }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  margin-top: 25px;
+  background-color: #635a32;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: black;
+  color: #d6ca32;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #d6ca32;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sample-grid{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.sample-grid-item{
+  text-align: center;
+}
+
+.sample-grid .btn{
+  background-color: #d6ca32;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: 'Comfortaa', cursive;
+}
+.sample-content{
+  width: 70%;
+  margin: auto;
+  margin-top: 5%;
+
+}
+
+.result-container{
+  text-align: center;
+}
+
+.result-content{
+    text-decoration: none;
+    color: #635a32;
+    border: 2px solid #635a32;
+    padding: 5px 30px 5px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'Satisfy', cursive;
+    margin-bottom: 0;
+}
+
+.emoji-container{
+    width: 50px;
+    margin:auto;
+    margin-top: 10px;
+}
+
+.emoji-container img{
+    width: 100%;
+    height: auto;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

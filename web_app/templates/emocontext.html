@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/emocontext.css') }}">
+</head>
+<script type="text/javascript" src="{{ url_for('static', filename='js/emoContext.js') }}">
+</script>
+<body>
+<header>
+<ul>
+  <li><a class="active" href="{{ url_for('homepage') }}">EmoContext</a></li>
+  <li><a href="{{ url_for('about') }}">about</a></li>
+</ul>
+</header>
+
+<div class="form-container">
+<!-- <form action="{{ url_for('check') }}" method="post">
+Replica 1: <input type="text" name="replica1" value=""><br>
+Replica 2: <input type="text" name="replica2" value=""><br>
+Replica 3: <input type="text" name="replica3" value=""><br>
+<input type="submit" value="Submit">
+</form> -->
+
+<div class="container">
+  <form action="{{ url_for('check') }}" method="post">
+  <div class="row">
+    <div class="col-25">
+      <label for="replica1">Sentence no. 1</label>
+    </div>
+    <div class="col-75">
+      <input id ="replica1" type="text" name="replica1" value="">
+    </div>
+  </div>
+  
+    <div class="row">
+    <div class="col-25">
+      <label for="replica2">Sentence no. 2</label>
+    </div>
+    <div class="col-75">
+      <input id= "replica2" type="text" name="replica2" value="">
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-25">
+      <label for="replica3">Sentence no. 3</label>
+    </div>
+    <div class="col-75">
+      <input id="replica3" type="text" name="replica3" value="">
+    </div>
+  </div>
+  
+  <div class="row">
+    <input id="submit" type="submit" value="Submit" onclick="getEmotion()">
+  </div>
+  </form>
+</div>
+</div>
+
+{% if label is defined %}
+<div class="result-container">
+  <p class="result-content">{{label}}</p>
+</div>
+{% endif %}
+
+<!--Decomentare pentru label cu emoji-->
+<!--{% if label =="happy" %}-->
+<!--<div class="emoji-container">-->
+<!--<img src="{{ url_for('static', filename='media/happy.png') }}">-->
+<!--</div>-->
+<!--{% endif %}-->
+
+<!--{% if label =="sad" %}-->
+<!--<div class="emoji-container">-->
+<!--<img src="{{ url_for('static', filename='media/sad.png') }}">-->
+<!--</div>-->
+<!--{% endif %}-->
+
+<!--{% if label =="angry" %}-->
+<!--<div class="emoji-container">-->
+<!--<img src="{{ url_for('static', filename='media/angry.png') }}">-->
+<!--</div>-->
+<!--{% endif %}-->
+
+<!--{% if label =="other" %}-->
+<!--<div class="emoji-container">-->
+<!--<img src="{{ url_for('static', filename='media/other.png') }}">-->
+<!--</div>-->
+<!--{% endif %}-->
+
+<div class="sample-content">
+	<p>Samples: </p>
+	<hr>
+<div class = "sample-grid">
+	<div class="sample-grid-item"><button class="btn" id="happyBtn" onclick="getRandText({{happy}})">Happy Context</button></div>
+	<div class="sample-grid-item"><button class="btn" id="sadBtn" onclick="getRandText({{sad}})">Sad Context</button></div>
+	<div class="sample-grid-item"><button class="btn" id="angryBtn" onclick="getRandText({{angry}})">Angry Context</button></div>
+	<div class="sample-grid-item"><button class="btn" id="otherBtn" onclick="getRandText({{other}})">Other Context</button></div>
+</div>
+</div>
+</body>
+</html>
